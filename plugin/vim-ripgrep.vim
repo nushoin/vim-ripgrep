@@ -47,7 +47,7 @@ endfun
 
 fun! s:RgSearchTerm(txt)
   if empty(a:txt)
-    return expand("<cword>")
+    return '-w ' . expand("<cword>")
   else
     return a:txt
   endif
